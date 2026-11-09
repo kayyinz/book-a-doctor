@@ -76,7 +76,7 @@ MONGO_URL=isi_dengan_connection_string_mongodb
 Jalankan server:
 
 ```bash
-nodemon index.js
+npm start
 ```
 
 Server berjalan di `http://localhost:8001`.

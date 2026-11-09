@@ -1,3 +1,125 @@
-body {
-  background-color: f8f9fa;
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap');
+
+:root {
+  --app-black: #000000;
+  --app-panel: #121212;
+  --app-panel-hover: #1c1c1c;
+  --app-field: #242424;
+  --app-line: #2c2c2c;
+  --app-text: #ffffff;
+  --app-muted: #b3b3b3;
+
+  color-scheme: dark;
+  --bs-body-bg: var(--app-black);
+  --bs-body-color: var(--app-text);
+  --bs-secondary-color: var(--app-muted);
+  --bs-secondary-color-rgb: 179, 179, 179;
+  --bs-border-color: var(--app-line);
+  --bs-link-color: #ffffff;
+  --bs-link-color-rgb: 255, 255, 255;
+  --bs-link-hover-color: #ffffff;
+  --bs-link-hover-color-rgb: 255, 255, 255;
+  --bs-body-font-family: 'Figtree', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
+
+body {
+  background-color: var(--app-black);
+  color: var(--app-text);
+  font-family: var(--bs-body-font-family);
+}
+
+h1, h2, h3, h4, h5, h6 { color: var(--app-text); font-weight: 700; }
+a { text-decoration-color: var(--app-muted); }
+
+nav.bg-white {
+  background-color: var(--app-black) !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--app-line);
+}
+nav.bg-white a,
+nav.bg-white .text-dark { color: var(--app-muted) !important; font-weight: 600; }
+nav.bg-white a:hover { color: #ffffff !important; }
+nav.bg-white a.fw-bold { color: #ffffff !important; font-size: 1.15rem; }
+nav.bg-white .text-muted { color: #535353 !important; }
+
+.btn { border-radius: 500px; font-weight: 700; padding-left: 1.25rem; padding-right: 1.25rem; }
+.btn-sm { padding-left: 1rem; padding-right: 1rem; }
+.btn-dark {
+  --bs-btn-color: #000000;
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: #ffffff;
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: #f0f0f0;
+  --bs-btn-hover-border-color: #f0f0f0;
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: #d9d9d9;
+  --bs-btn-active-border-color: #d9d9d9;
+  --bs-btn-disabled-color: #000000;
+  --bs-btn-disabled-bg: #a7a7a7;
+  --bs-btn-disabled-border-color: #a7a7a7;
+}
+.btn-dark:hover { transform: scale(1.03); }
+
+.btn.bg-white, .btn-light {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid #727272 !important;
+  box-shadow: none !important;
+}
+.btn.bg-white:hover, .btn-light:hover {
+  border-color: #ffffff !important;
+  transform: scale(1.03);
+}
+
+.card {
+  background-color: var(--app-panel);
+  color: var(--app-text);
+  border: none !important;
+  border-radius: 10px;
+  box-shadow: none !important;
+}
+.card:hover { background-color: var(--app-panel-hover); }
+
+.form-control, .form-select {
+  background-color: var(--app-field) !important;
+  color: #ffffff;
+  border: 1px solid transparent !important;
+  border-radius: 6px;
+}
+.form-control::placeholder { color: #a7a7a7; }
+.form-control:focus, .form-select:focus {
+  background-color: var(--app-field) !important;
+  color: #ffffff;
+  border-color: #ffffff !important;
+  box-shadow: none;
+}
+.form-label { color: var(--app-muted); }
+
+.table {
+  --bs-table-color: #ffffff;
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--app-line);
+  --bs-table-hover-bg: #1c1c1c;
+  --bs-table-hover-color: #ffffff;
+}
+.table > thead > tr > th {
+  color: var(--app-muted) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  border-bottom-color: var(--app-line);
+}
+
+.modal-content { background-color: var(--app-panel); color: #ffffff; border: none; border-radius: 12px; }
+.modal-header, .modal-footer { border-color: var(--app-line); }
+.btn-close { filter: invert(1) grayscale(1); }
+
+.badge { border-radius: 500px; font-weight: 600; padding: 0.4em 0.8em; }
+.badge.bg-secondary { background-color: #8a6a1c !important; color: #ffffff; }
+.badge.bg-success   { background-color: #1f7a4a !important; }
+.badge.bg-danger    { background-color: #a13b3b !important; }
+
+.text-success { color: #5fbf8a !important; }
+.text-danger  { color: #f27c7c !important; }
+.text-muted   { color: var(--app-muted) !important; }
